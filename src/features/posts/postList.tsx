@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { selectAllPosts } from "./postsSlice";
 
-const postsList = () =>{
+const PostsList = () =>{
 
     const posts = useSelector(selectAllPosts)
 
@@ -20,4 +20,4 @@ const postsList = () =>{
         </section>
     )
 }
-export default postsList
+export default PostsList
