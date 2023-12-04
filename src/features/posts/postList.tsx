@@ -1,3 +1,4 @@
+import "./post.css";
 import { useSelector } from "react-redux";
 import { selectAllPosts } from "./postsSlice";
 
@@ -7,14 +8,14 @@ const PostsList = () =>{
 
     const renderedPosts = posts.map((post) =>(
 
-        <article key={post.id}>
+        <article className="post-article" key={post.id}>
             <h3>{post.title}</h3>
             <p>{post.content.substring(0, 100)}</p>
         </article>
     ))
 
     return(
-        <section>
+        <section className="post">
             <h2>Posts</h2>
             {renderedPosts}
         </section>
