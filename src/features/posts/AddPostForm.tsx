@@ -33,7 +33,7 @@ const AddPostForm = () => {
         if (title && content) {
 
             dispatch(
-                postAdded(title, content)
+                postAdded(title, content, userId)
             )
             setTitle('')
             setContent('')
@@ -41,7 +41,6 @@ const AddPostForm = () => {
     }
 
     const usersOption = users.map((user) => (
-
         <div key={user.id}>
             <option value="">
                 {user.name}
