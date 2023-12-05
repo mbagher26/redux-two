@@ -1,12 +1,14 @@
 import { useState } from "react"
-import './post.css'
-
+import { useDispatch } from "react-redux";
+import { postAdded } from "./postsSlice";
+import './post.css';
+import { nanoid } from "@reduxjs/toolkit";
 
 const AddPostForm = () =>{
 
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-
+    const dispatch = useDispatch();
 
     const onTitleChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value)
@@ -14,6 +16,16 @@ const AddPostForm = () =>{
 
     const onContentChanged = (e:React.ChangeEvent<HTMLInputElement>) => {
         setContent(e.target.value)
+    }
+
+    const onSavePostChanged = () => {
+
+        if(title && content){
+
+            dispatch(postAdded({id: nanoid,title, content}))
+            setTitle('')
+            setContent('')
+        }
     }
 
     return(
@@ -36,7 +48,7 @@ const AddPostForm = () =>{
                 />
                 <button
                 type="button"
-                onClick={()=>{}}
+                onClick={onSavePostChanged}
                 // disabled={}
                 >Save Post</button>
             </form>           
