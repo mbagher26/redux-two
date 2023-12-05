@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import './post.css'
 
 
 const AddPostForm = () =>{
@@ -17,17 +17,17 @@ const AddPostForm = () =>{
     }
 
     return(
-        <section>
+        <section className="section">
             <h2>Add a New Form</h2>
-            <form>
-                <label htmlFor="postTitle">Post Title:</label>
+            <form className="form">
+                <label className="label" htmlFor="postTitle">Post Title:</label>
                 <input type="text"
                 id="postTitle" 
                 name="postTitle"
                 value={title}
                 onChange={onTitleChanged}
                 />
-                <label htmlFor="postContent">Content:</label>
+                <label className="label" htmlFor="postContent">Content:</label>
                 <input type="text"
                 id="postContent"
                 name="postContent"
@@ -36,8 +36,8 @@ const AddPostForm = () =>{
                 />
                 <button
                 type="button"
-                onClick={onSavePostClicked}
-                disabled={!conSave}
+                onClick={()=>{}}
+                // disabled={}
                 >Save Post</button>
             </form>           
         </section>
