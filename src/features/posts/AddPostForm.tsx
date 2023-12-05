@@ -36,7 +36,7 @@ const AddPostForm = () =>{
                 />
                 <button
                 type="button"
-                onClick={onSavePostcligked}
+                onClick={onSavePostClicked}
                 disabled={!conSave}
                 >Save Post</button>
             </form>           
