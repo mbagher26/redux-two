@@ -4,11 +4,18 @@ import { useState } from "react"
 
 const AddPostForm = () =>{
 
-    const [title, setTitle] = useState();
-    const [content, setContent] = useState();
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
 
 
-    
+    const onTitleChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setTitle(e.target.value)
+    }
+
+    const onContentChanged = (e:React.ChangeEvent<HTMLInputElement>) => {
+        setContent(e.target.value)
+    }
+
     return(
         <section>
             <h2>Add a New Form</h2>
