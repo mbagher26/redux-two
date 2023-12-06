@@ -28,3 +28,10 @@
     flex-direction: row;
     justify-content: flex-start;
 }
+
+/* for PostList */
+.p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
