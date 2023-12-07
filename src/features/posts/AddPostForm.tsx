@@ -41,11 +41,11 @@ const AddPostForm = () => {
     }
 
     const usersOption = users.map((user) => (
-        <div key={user.id}>
-            <option value="">
+        
+            <option key={user.id} value={user.id}>
                 {user.name}
             </option>
-        </div>
+    
     ))
     
     return (
