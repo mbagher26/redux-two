@@ -77,7 +77,7 @@ const postsSlice = createSlice({
             const existingPost = state.find((post) => post.id === id)
 
             if(existingPost){
-                existingPost.reactions[reaction]
+                existingPost.reactions[reaction]++
             }
         }
     }
