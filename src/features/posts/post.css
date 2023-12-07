@@ -35,3 +35,17 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+/* for ReactionButton */
+
+.button-reaction {
+    border: none;
+    outline: none;
+    
+}
+
+.button-reaction span {
+    border: none;
+    outline: none;
+    padding: none;
+}
