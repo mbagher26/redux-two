@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { postState, reactionAdded } from "./postsSlice";
+import { post, reactionAdded } from "./postsSlice";
 import './post.css'
 
 const reactionEmoji = {
@@ -10,7 +10,7 @@ const reactionEmoji = {
     coffee: '☕'
 }
 
-const ReactionButton = ({ post }: { post: postState }) => {
+const ReactionButton = ({ post }: { post: post }) => {
 
     const dispatch = useDispatch()
 
