@@ -40,3 +40,11 @@
 .read-the-docs {
   color: #888;
 }
+
+.reactionbutton {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  font-size: 1rem;
+}
