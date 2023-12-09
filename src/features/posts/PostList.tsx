@@ -9,7 +9,7 @@ const PostsList = () => {
 
     const posts = useSelector(selectAllPosts)
 
-    const orderposts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
+    const orderposts = posts.posts.slice().sort((a, b) => b.date.localeCompare(a.date))
     const renderedPosts = orderposts.map((post) => (
 
         <article className="post-article" key={post.id}>
