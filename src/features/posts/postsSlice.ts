@@ -6,6 +6,7 @@ export interface postState {
     title: string,
     content: string,
     date: string,
+    userId: string,
     reactions: {
         thumbsUp: number,
         wow: number;
@@ -21,6 +22,7 @@ const initialState: postState[] = [
     id: '1', 
     title: 'Learning Redux Tolkit', 
     content: 'I`ve heard go things.',
+    userId: '',
     date: sub(new Date(), {minutes: 10}).toISOString(),
     reactions : {
         thumbsUp: 0,
@@ -32,6 +34,7 @@ const initialState: postState[] = [
     },
     { id: '2', 
     title: 'Slices...', 
+    userId:'',
     content: "The more I say slice, the more I want pizza.",
     date: sub(new Date(), {minutes: 5}).toISOString(),
     reactions : {
